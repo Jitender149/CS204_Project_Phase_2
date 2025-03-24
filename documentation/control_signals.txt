@@ -1,0 +1,102 @@
+# Control signals used in each instruction step: 
+
+FETCH STAGE: 
+Control Signals Used:
+- MuxMA_select = 1 (selects instruction memory)
+- MAR (holds PC value for fetching)
+- IR (stores fetched instruction)
+- PC_Temp (stores PC+4)
+
+DECODE STAGE:
+Control Signals Set:
+- RF_Write (register file write enable)
+- MuxB_select (selects between register/immediate)
+- MuxY_select (selects ALU/memory/PC+4)
+- Mem_Read (memory read enable)
+- Mem_Write (memory write enable)
+- MuxMA_select (instruction/data memory select)
+- MuxPC_select (PC source select)
+- MuxINC_select (PC increment select)
+- numBytes (memory access size)
+- ALUOp[0-14] (ALU operation selection)
+
+Values Extracted:
+- opcode (from IR[6:0])
+- func3 (from IR[14:12])
+- func7 (from IR[31:25])
+- RD (destination register)
+- RS1 (source register 1)
+- RS2 (source register 2)
+- immed (immediate value)
+
+EXECUTE STAGE:
+Control Signals Used:
+- MuxB_select (determines InB source)
+- ALUOp array (determines operation):
+  - ALUOp[0]: Addition
+  - ALUOp[1]: Subtraction
+  - ALUOp[2]: Division
+  - ALUOp[3]: Multiplication
+  - ALUOp[4]: Remainder
+  - ALUOp[5]: XOR
+  - ALUOp[6]: Shift left logical
+  - ALUOp[7]: Shift right arithmetic
+  - ALUOp[8]: Shift right logical
+  - ALUOp[9]: OR
+  - ALUOp[10]: AND
+  - ALUOp[11]: Set less than
+  - ALUOp[12]: Branch equal
+  - ALUOp[13]: Branch not equal
+  - ALUOp[14]: Branch greater equal
+
+Registers Used:
+- RA (Input A)
+- RB/immed (Input B based on MuxB_select)
+- RZ (ALU result)
+
+MEMORY STAGE:
+Control Signals Used:
+- MuxY_select:
+  0: Select ALU result (RZ)
+  1: Select memory data
+  2: Select PC_Temp
+- Mem_Read (for load instructions)
+- Mem_Write (for store instructions)
+- MuxMA_select (memory type selection)
+- numBytes (size of memory access)
+
+Registers Used:
+- MAR (memory address)
+- MDR (memory data)
+- RY (final result)
+
+REGISTER UPDATE STAGE:
+Control Signals Used:
+- RF_Write (register write enable)
+- RD (destination register number)
+- RY (value to write)
+
+IAG (Instruction Address Generation)
+Control Signals Used:
+- MuxPC_select:
+  0: Jump to RA (JALR)
+  1: Normal PC update
+- MuxINC_select:
+  0: PC+4
+  1: PC+immed (branches/jumps)
+
+Special Control Signal Combinations: 
+R-type instructions:
+- RF_Write=1, MuxB_select=0, MuxY_select=0
+
+Load instructions:
+- RF_Write=1, MuxB_select=1, MuxY_select=1, Mem_Read=1
+
+Store instructions:
+- RF_Write=0, MuxB_select=1, MuxY_select=1, Mem_Write=1
+
+Branch instructions:
+- RF_Write=0, MuxB_select=0, MuxINC_select=1
+
+Jump instructions:
+- RF_Write=1, MuxY_select=2, MuxPC_select varies

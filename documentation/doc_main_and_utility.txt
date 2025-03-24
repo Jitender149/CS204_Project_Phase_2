@@ -1,0 +1,136 @@
+RISC-V Simulator Documentation
+============================
+
+1. Project Overview
+------------------
+This project implements a RISC-V instruction set simulator with a five-stage non pipelined single cycle processing:
+- Fetch
+- Decode
+- Execute
+- Memory Access
+- Register Write Back
+
+2. File Structure
+----------------
+The project consists of two main files:
+- main.cpp: Contains the main program flow and simulator execution
+- utility.hpp: Contains utility functions and instruction processing logic
+
+3. main.cpp Documentation
+------------------------
+Key Components:
+
+a) Global Variables:
+- reg[32]: Array of 32 registers
+- dataMemory: Map storing program data
+- instructionMemory: Map storing program instructions
+- Control signals (RS1, RS2, RD, etc.)
+- ALUOp[15]: Array for ALU operation control
+
+b) Main Function Flow:
+1. Opens input.mc file
+2. Processes each line:
+   - Splits into tokens
+   - Validates format
+   - Stores in appropriate memory (instruction/data)
+3. Calls run_RISC_simulator()
+
+c) Validation Functions:
+- validateDataSegment(): Ensures data segment format is correct
+- validateInstruction(): Ensures instruction format is correct
+
+d) run_RISC_simulator():
+- Executes instruction cycle
+- Generates JSON output
+- Updates registers and memory
+
+4. utility.hpp Documentation
+---------------------------
+Key Components:
+
+a) Utility Functions:
+- hex(): Converts integers to hexadecimal strings
+- init(): Initializes registers and control signals
+- ProcessorMemoryInterface(): Handles memory operations
+
+b) Instruction Processing Functions:
+
+1. fetch():
+- Uses PC to get instruction
+- Updates MAR, IR
+- Calculates next PC value
+
+2. Decode():
+- Extracts instruction fields (opcode, func3, etc.)
+- Sets control signals via GenerateControlSignals()
+- Handles different instruction formats:
+  R format - add, and, or, sll, slt, sra, srl, sub, xor
+  I format - addi, andi, ori, lb, lh, lw, jalr
+  S format - sb, sw, sh
+  SB format - beq, bne, bge, blt
+  U format - auipc, lui
+  J format - jal
+
+
+3. Execute():
+- Performs ALU operations based on ALUOp
+- Handles arithmetic, logical, and branch operations
+- Sets condition flags for branches
+
+4. MemoryAccess():
+- Performs memory read/write
+- Updates RY based on MuxY_select
+- Calls IAG for PC update
+
+5. RegisterUpdate():
+- Updates destination register if RF_Write is set
+
+c) Control Signals:
+[Detailed list of control signals and their purposes as provided in previous response]
+
+5. Instruction Formats
+---------------------
+R-Type Instructions:
+- Format: opcode (7) | rd (5) | func3 (3) | rs1 (5) | rs2 (5) | func7 (7)
+- Examples: add, sub, and, or, etc.
+
+I-Type Instructions:
+- Format: opcode (7) | rd (5) | func3 (3) | rs1 (5) | imm[11:0] (12)
+- Examples: lw, addi, jalr, etc.
+
+S-Type Instructions:
+- Format: opcode (7) | imm[4:0] (5) | func3 (3) | rs1 (5) | rs2 (5) | imm[11:5] (7)
+- Examples: sw, sh, sb
+
+B-Type Instructions:
+- Format: opcode (7) | imm[11,4:1] (5) | func3 (3) | rs1 (5) | rs2 (5) | imm[12,10:5] (7)
+- Examples: beq, bne, blt
+
+U-Type Instructions:
+- Format: opcode (7) | rd (5) | imm[31:12] (20)
+- Examples: lui, auipc
+
+J-Type Instructions:
+- Format: opcode (7) | rd (5) | imm[20,10:1,11,19:12] (20)
+- Examples: jal
+
+6. Memory Organization
+---------------------
+- Data Memory: Stores program data (address > 0x10000000)
+- Instruction Memory: Stores program instructions
+- Memory access via ProcessorMemoryInterface()
+
+7. Non-Pipelined Single Cycle Implementation
+------------------------
+- Fetch: Gets instruction from memory
+- Decode: Extracts instruction fields and sets control signals
+- Execute: Performs ALU operations
+- Memory: Handles memory access
+- WriteBack: Updates registers
+
+8. Error Handling
+----------------
+- Validates instruction and data formats
+- Checks for invalid opcodes and function codes
+- Handles division by zero
+- Reports invalid memory access

@@ -1,0 +1,56 @@
+graph TD
+    %% Control Unit and Signals
+    CU[Control Unit] --> |Control Signals| CS[Control Signals]
+    CS --> |ALUOp 0-14| ALU_Ctrl[ALU Control:<br/>0:ADD 1:SUB<br/>2:DIV 3:MUL<br/>4:REM 5:XOR<br/>6:SLL 7:SRA<br/>8:SRL 9:OR<br/>10:AND 11:SLT<br/>12:BEQ 13:BNE<br/>14:BGE]
+    CS --> |RF_Write| RF_Ctrl[Register Control]
+    CS --> |Mem_R/W| Mem_Ctrl[Memory Control]
+    CS --> |MuxSelects| Mux_Ctrl[Multiplexer Control]
+
+    %% Fetch Stage
+    PC[Program Counter] --> IM[Instruction Memory]
+    IM --> IR[Instruction Register]
+    PC --> Add4[PC + 4]
+    Add4 --> MuxPC{MuxPC}
+    MuxPC --> |MuxPC_select| PC
+
+    %% Decode Stage
+    IR --> CU
+    IR --> RF[Register File]
+    IR --> ImmGen[Immediate Generator]
+    RF --> |RS1| RA[RA]
+    RF --> |RS2| RB[RB]
+    ImmGen --> immed[Immediate]
+
+    %% Execute Stage
+    RA --> MuxB{MuxB}
+    RB --> MuxB
+    immed --> MuxB
+    MuxB --> ALU
+    ALU_Ctrl --> ALU
+    ALU --> RZ[RZ]
+    CS --> |MuxB_select| MuxB
+
+    %% Memory Stage
+    RZ --> MAR[MAR]
+    RB --> MDR[MDR]
+    MAR --> DM[Data Memory]
+    MDR --> DM
+    Mem_Ctrl --> DM
+    DM --> RY[RY]
+
+    %% WriteBack Stage
+    MuxY{MuxY} --> |RF_Write| RF
+    RZ --> MuxY
+    RY --> MuxY
+    Add4 --> MuxY
+    CS --> |MuxY_select| MuxY
+
+    %% Style
+    classDef control fill:#f9f,stroke:#333,stroke-width:2px
+    classDef datapath fill:#bbf,stroke:#333,stroke-width:2px
+    class CU,CS,ALU_Ctrl,RF_Ctrl,Mem_Ctrl,Mux_Ctrl control
+    class PC,IM,IR,RF,ALU,DM,RZ,RY,RA,RB datapath
+
+
+%% The link for the diagram using Mermaid AI
+%% https://www.mermaidchart.com/raw/94569b9d-3420-4647-a7d0-c3142c1b3803?theme=light&version=v0.1&format=svg

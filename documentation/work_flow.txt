@@ -1,0 +1,113 @@
+Project Workflow
+===============
+
+1. File Flow Description
+-----------------------
+input.mc → main.cpp → (utility.hpp functions) → out.json & output.txt
+
+2. Detailed Flow
+---------------
+a) input.mc:
+   - Contains machine code instructions and data
+   - Format: <address> <instruction/data>
+   - Separated into instruction and data segments by "$" marker
+
+b) main.cpp:
+   - Reads input.mc
+   - Validates instructions and data
+   - Stores in instructionMemory and dataMemory
+   - Calls functions from utility.hpp
+   - Generates output files
+
+c) utility.hpp:
+   - Provides core functionality
+   - Handles instruction processing stages
+   - Manages control signals
+   - Performs memory operations
+
+d) output.txt:
+   - Contains final register values
+   - Shows final memory state
+
+e) out.json:
+   - Contains detailed execution trace
+   - Shows step-by-step instruction processing
+   - Includes register and memory updates
+
+3. Text-Based Flowchart
+----------------------
+                                    ┌──────────┐
+                                    │ input.mc │
+                                    └────┬─────┘
+                                         │
+                                         ▼
+┌───────────┐                     ┌──────────┐                      ┌───────────┐
+│           │  function calls     │          │    uses functions    │           │
+│utility.hpp│◄────────────────────┤ main.cpp ├───────────────────►  │utility.hpp│
+│           │                     │          │                      │           │
+└───────────┘                     └────┬─────┘                      └───────────┘
+                                       │
+                                       │
+                             ┌─────────┴──────────┐
+                             │                    │
+                             ▼                    ▼
+                      ┌──────────┐         ┌──────────┐
+                      │ out.json │         │output.txt│
+                      └──────────┘         └──────────┘
+4. Processing Flow
+-----------------
+a) Input Processing:
+   input.mc → main.cpp
+   - Read line by line
+   - Split into tokens
+   - Validate format
+   - Store in appropriate memory
+
+b) Instruction Execution:
+   main.cpp → utility.hpp
+   1. Fetch stage
+   2. Decode stage
+   3. Execute stage
+   4. Memory Access stage
+   5. Register Update stage
+
+c) Output Generation:
+   main.cpp → output files
+   - Register states → output.txt
+   - Memory contents → output.txt
+   - Execution trace → out.json
+
+5. Data Flow Through Files
+-------------------------
+input.mc:
+  │
+  ├─► main.cpp:
+  │     ├─► Read input
+  │     ├─► Parse instructions/data
+  │     ├─► Store in memory maps
+  │     │
+  │     ├─► utility.hpp:
+  │     │     ├─► Instruction processing
+  │     │     ├─► Memory operations
+  │     │     └─► Control signal management
+  │     │
+  │     └─► Generate outputs:
+  │           ├─► out.json (execution trace)
+  │           └─► output.txt (final state)
+
+6. Key Interactions
+------------------
+1. main.cpp ↔ input.mc:
+   - File reading
+   - Initial parsing
+   - Validation
+
+2. main.cpp ↔ utility.hpp:
+   - Instruction processing
+   - Memory management
+   - Register operations
+
+3. main.cpp ↔ output files:
+   - State logging
+   - Result recording
+   - Execution tracing

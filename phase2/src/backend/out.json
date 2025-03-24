@@ -1,0 +1,1595 @@
+{
+	"0": {
+		"FETCH": 
+			"Reading word from memory: 0x",
+			"IR": "0x10000797",
+		"Decode":{
+			"Opcode": 23,
+			"RD": 15,
+			"Func3": 0,
+			"RS1": 0,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 268435456},
+			"Message": "This is AUIPC instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 0,
+			"alu.RB": 0,
+			"ALU_Result": 268435456,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 268435456,
+			"MAR": 0,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 268435456 to the register 15",
+		"Clock": 1,
+		"Time taken (in microseconds)": 2006 ,
+		"PC":4,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 268435456, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"1": {
+		"FETCH": 
+			"Reading word from memory: 0x4",
+			"IR": "0x87A783",
+		"Decode":{
+			"Opcode": 3,
+			"RD": 15,
+			"Func3": 2,
+			"RS1": 15,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 8},
+			"Message": "This is Lw Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 1,
+				"Mem_Write": 1,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 268435456,
+			"alu.RB": 0,
+			"ALU_Result": 268435464,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 5,
+			"MAR": 268435464,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 5 to the register 15",
+		"Clock": 2,
+		"Time taken (in microseconds)": 0 ,
+		"PC":8,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"2": {
+		"FETCH": 
+			"Reading word from memory: 0x8",
+			"IR": "0xFFE78793",
+		"Decode":{
+			"Opcode": 19,
+			"RD": 15,
+			"Func3": 0,
+			"RS1": 15,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": -2},
+			"Message": "This is addi Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 5,
+			"alu.RB": 0,
+			"ALU_Result": 3,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 3,
+			"MAR": 8,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 3 to the register 15",
+		"Clock": 3,
+		"Time taken (in microseconds)": 0 ,
+		"PC":12,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"3": {
+		"FETCH": 
+			"Reading word from memory: 0xC",
+			"IR": "0x10000817",
+		"Decode":{
+			"Opcode": 23,
+			"RD": 16,
+			"Func3": 0,
+			"RS1": 15,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 268435456},
+			"Message": "This is AUIPC instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 12,
+			"alu.RB": 0,
+			"ALU_Result": 268435468,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 268435468,
+			"MAR": 12,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 268435468 to the register 16",
+		"Clock": 4,
+		"Time taken (in microseconds)": 0 ,
+		"PC":16,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 268435468, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"4": {
+		"FETCH": 
+			"Reading word from memory: 0x10",
+			"IR": "0x82803",
+		"Decode":{
+			"Opcode": 3,
+			"RD": 16,
+			"Func3": 2,
+			"RS1": 16,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 0},
+			"Message": "This is Lw Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 1,
+				"Mem_Write": 1,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 268435468,
+			"alu.RB": 0,
+			"ALU_Result": 268435468,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 0,
+			"MAR": 268435468,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 0 to the register 16",
+		"Clock": 5,
+		"Time taken (in microseconds)": 0 ,
+		"PC":20,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"5": {
+		"FETCH": 
+			"Reading word from memory: 0x14",
+			"IR": "0x10000497",
+		"Decode":{
+			"Opcode": 23,
+			"RD": 9,
+			"Func3": 0,
+			"RS1": 16,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 268435456},
+			"Message": "This is AUIPC instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 20,
+			"alu.RB": 0,
+			"ALU_Result": 268435476,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 268435476,
+			"MAR": 20,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 268435476 to the register 9",
+		"Clock": 6,
+		"Time taken (in microseconds)": 0 ,
+		"PC":24,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 268435476, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"6": {
+		"FETCH": 
+			"Reading word from memory: 0x18",
+			"IR": "0xFEC4A483",
+		"Decode":{
+			"Opcode": 3,
+			"RD": 9,
+			"Func3": 2,
+			"RS1": 9,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": -20},
+			"Message": "This is Lw Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 1,
+				"Mem_Write": 1,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 268435476,
+			"alu.RB": 0,
+			"ALU_Result": 268435456,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 1,
+			"MAR": 268435456,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 1 to the register 9",
+		"Clock": 7,
+		"Time taken (in microseconds)": 0 ,
+		"PC":28,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"7": {
+		"FETCH": 
+			"Reading word from memory: 0x1C",
+			"IR": "0x10000517",
+		"Decode":{
+			"Opcode": 23,
+			"RD": 10,
+			"Func3": 0,
+			"RS1": 9,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 268435456},
+			"Message": "This is AUIPC instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 28,
+			"alu.RB": 0,
+			"ALU_Result": 268435484,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 268435484,
+			"MAR": 28,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 268435484 to the register 10",
+		"Clock": 8,
+		"Time taken (in microseconds)": 2007 ,
+		"PC":32,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 268435484, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"8": {
+		"FETCH": 
+			"Reading word from memory: 0x20",
+			"IR": "0xFE852503",
+		"Decode":{
+			"Opcode": 3,
+			"RD": 10,
+			"Func3": 2,
+			"RS1": 10,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": -24},
+			"Message": "This is Lw Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 1,
+				"Mem_Write": 1,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 268435484,
+			"alu.RB": 0,
+			"ALU_Result": 268435460,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 2,
+			"MAR": 268435460,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 2 to the register 10",
+		"Clock": 9,
+		"Time taken (in microseconds)": 0 ,
+		"PC":36,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"9": {
+		"FETCH": 
+			"Reading word from memory: 0x24",
+			"IR": "0x880813",
+		"Decode":{
+			"Opcode": 19,
+			"RD": 16,
+			"Func3": 0,
+			"RS1": 16,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 8},
+			"Message": "This is addi Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 0,
+			"alu.RB": 0,
+			"ALU_Result": 8,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 8,
+			"MAR": 36,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 8 to the register 16",
+		"Clock": 10,
+		"Time taken (in microseconds)": 0 ,
+		"PC":40,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"10": {
+		"FETCH": 
+			"Reading word from memory: 0x28",
+			"IR": "0xA485B3",
+		"Decode":{
+			"Opcode": 51,
+			"RD": 11,
+			"Func3": 0,
+			"RS1": 9,
+			"RS2": 10,
+			"Func7": 0,
+			"Immediate": 8},
+			"Message": "This is Add Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 1,
+			"alu.RB": 2,
+			"ALU_Result": 3,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 3,
+			"MAR": 40,
+			"MDR": 0,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 3 to the register 11",
+		"Clock": 11,
+		"Time taken (in microseconds)": 0 ,
+		"PC":44,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 0, 0, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"11": {
+		"FETCH": 
+			"Reading word from memory: 0x2C",
+			"IR": "0xB82023",
+		"Decode":{
+			"Opcode": 35,
+			"RD": 11,
+			"Func3": 2,
+			"RS1": 16,
+			"RS2": 11,
+			"Func7": 0,
+			"Immediate": 0},
+			"Message": "This is sw Instruction.",
+			"Control Signals":{
+				"RF_Write": 0,
+				"MuxB_select": 1,
+				"MuxY_select": 1,
+				"Mem_Write": 0,
+				"Mem_Read": 1},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 8,
+			"alu.RB": 3,
+			"ALU_Result": 8,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 1,
+			"MAR": 8,
+			"MDR": 3,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"No updation in the register value.",
+		"Clock": 12,
+		"Time taken (in microseconds)": 0 ,
+		"PC":48,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 0, 0, 0, 3, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"12": {
+		"FETCH": 
+			"Reading word from memory: 0x30",
+			"IR": "0x480813",
+		"Decode":{
+			"Opcode": 19,
+			"RD": 16,
+			"Func3": 0,
+			"RS1": 16,
+			"RS2": 11,
+			"Func7": 0,
+			"Immediate": 4},
+			"Message": "This is addi Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 8,
+			"alu.RB": 3,
+			"ALU_Result": 12,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 12,
+			"MAR": 48,
+			"MDR": 3,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 12 to the register 16",
+		"Clock": 13,
+		"Time taken (in microseconds)": 0 ,
+		"PC":52,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 0, 0, 0, 3, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"13": {
+		"FETCH": 
+			"Reading word from memory: 0x34",
+			"IR": "0x504B3",
+		"Decode":{
+			"Opcode": 51,
+			"RD": 9,
+			"Func3": 0,
+			"RS1": 10,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 4},
+			"Message": "This is Add Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 2,
+			"alu.RB": 0,
+			"ALU_Result": 2,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 2,
+			"MAR": 52,
+			"MDR": 3,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 2 to the register 9",
+		"Clock": 14,
+		"Time taken (in microseconds)": 0 ,
+		"PC":56,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 3, 0, 0, 0, 3, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"14": {
+		"FETCH": 
+			"Reading word from memory: 0x38",
+			"IR": "0x58533",
+		"Decode":{
+			"Opcode": 51,
+			"RD": 10,
+			"Func3": 0,
+			"RS1": 11,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 4},
+			"Message": "This is Add Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 3,
+			"alu.RB": 0,
+			"ALU_Result": 3,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 3,
+			"MAR": 56,
+			"MDR": 3,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 3 to the register 10",
+		"Clock": 15,
+		"Time taken (in microseconds)": 0 ,
+		"PC":60,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 3, 0, 0, 0, 3, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"15": {
+		"FETCH": 
+			"Reading word from memory: 0x3C",
+			"IR": "0xFFF78793",
+		"Decode":{
+			"Opcode": 19,
+			"RD": 15,
+			"Func3": 0,
+			"RS1": 15,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": -1},
+			"Message": "This is addi Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 3,
+			"alu.RB": 0,
+			"ALU_Result": 2,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 2,
+			"MAR": 60,
+			"MDR": 3,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 2 to the register 15",
+		"Clock": 16,
+		"Time taken (in microseconds)": 0 ,
+		"PC":64,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 3, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"16": {
+		"FETCH": 
+			"Reading word from memory: 0x40",
+			"IR": "0x78463",
+		"Decode":{
+			"Opcode": 99,
+			"RD": 15,
+			"Func3": 0,
+			"RS1": 15,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 8},
+			"Message": "This is BEQ instruction.",
+			"Control Signals":{
+				"RF_Write": 0,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 1,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 2,
+			"alu.RB": 0,
+			"ALU_Result": 0,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 0,
+			"MAR": 64,
+			"MDR": 3,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"No updation in the register value.",
+		"Clock": 17,
+		"Time taken (in microseconds)": 0 ,
+		"PC":68,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 3, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"17": {
+		"FETCH": 
+			"Reading word from memory: 0x44",
+			"IR": "0xFE0002E3",
+		"Decode":{
+			"Opcode": 99,
+			"RD": 15,
+			"Func3": 0,
+			"RS1": 0,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": -28},
+			"Message": "This is BEQ instruction.",
+			"Control Signals":{
+				"RF_Write": 0,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 1,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 0,
+			"alu.RB": 0,
+			"ALU_Result": 1,
+			"MuxB_Result": 0,
+			"MuxY_Result": 1},
+		"MemoryAccess":{
+			"RY": 1,
+			"MAR": 68,
+			"MDR": 3,
+			"Updating PC": "Jumped to offset provided by the immediate value."},
+		"RegisterUpdate": 
+			"No updation in the register value.",
+		"Clock": 18,
+		"Time taken (in microseconds)": 2008 ,
+		"PC":40,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 3, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"18": {
+		"FETCH": 
+			"Reading word from memory: 0x28",
+			"IR": "0xA485B3",
+		"Decode":{
+			"Opcode": 51,
+			"RD": 11,
+			"Func3": 0,
+			"RS1": 9,
+			"RS2": 10,
+			"Func7": 0,
+			"Immediate": -28},
+			"Message": "This is Add Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 2,
+			"alu.RB": 3,
+			"ALU_Result": 5,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 5,
+			"MAR": 40,
+			"MDR": 3,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 5 to the register 11",
+		"Clock": 19,
+		"Time taken (in microseconds)": 0 ,
+		"PC":44,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 5, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"19": {
+		"FETCH": 
+			"Reading word from memory: 0x2C",
+			"IR": "0xB82023",
+		"Decode":{
+			"Opcode": 35,
+			"RD": 11,
+			"Func3": 2,
+			"RS1": 16,
+			"RS2": 11,
+			"Func7": 0,
+			"Immediate": 0},
+			"Message": "This is sw Instruction.",
+			"Control Signals":{
+				"RF_Write": 0,
+				"MuxB_select": 1,
+				"MuxY_select": 1,
+				"Mem_Write": 0,
+				"Mem_Read": 1},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 12,
+			"alu.RB": 5,
+			"ALU_Result": 12,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 1,
+			"MAR": 12,
+			"MDR": 5,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"No updation in the register value.",
+		"Clock": 20,
+		"Time taken (in microseconds)": 0 ,
+		"PC":48,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 5, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"20": {
+		"FETCH": 
+			"Reading word from memory: 0x30",
+			"IR": "0x480813",
+		"Decode":{
+			"Opcode": 19,
+			"RD": 16,
+			"Func3": 0,
+			"RS1": 16,
+			"RS2": 11,
+			"Func7": 0,
+			"Immediate": 4},
+			"Message": "This is addi Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 12,
+			"alu.RB": 5,
+			"ALU_Result": 16,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 16,
+			"MAR": 48,
+			"MDR": 5,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 16 to the register 16",
+		"Clock": 21,
+		"Time taken (in microseconds)": 0 ,
+		"PC":52,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 5, 0, 0, 0, 2, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"21": {
+		"FETCH": 
+			"Reading word from memory: 0x34",
+			"IR": "0x504B3",
+		"Decode":{
+			"Opcode": 51,
+			"RD": 9,
+			"Func3": 0,
+			"RS1": 10,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 4},
+			"Message": "This is Add Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 3,
+			"alu.RB": 0,
+			"ALU_Result": 3,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 3,
+			"MAR": 52,
+			"MDR": 5,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 3 to the register 9",
+		"Clock": 22,
+		"Time taken (in microseconds)": 0 ,
+		"PC":56,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 5, 0, 0, 0, 2, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"22": {
+		"FETCH": 
+			"Reading word from memory: 0x38",
+			"IR": "0x58533",
+		"Decode":{
+			"Opcode": 51,
+			"RD": 10,
+			"Func3": 0,
+			"RS1": 11,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 4},
+			"Message": "This is Add Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 5,
+			"alu.RB": 0,
+			"ALU_Result": 5,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 5,
+			"MAR": 56,
+			"MDR": 5,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 5 to the register 10",
+		"Clock": 23,
+		"Time taken (in microseconds)": 0 ,
+		"PC":60,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 0, 0, 0, 2, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"23": {
+		"FETCH": 
+			"Reading word from memory: 0x3C",
+			"IR": "0xFFF78793",
+		"Decode":{
+			"Opcode": 19,
+			"RD": 15,
+			"Func3": 0,
+			"RS1": 15,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": -1},
+			"Message": "This is addi Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 2,
+			"alu.RB": 0,
+			"ALU_Result": 1,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 1,
+			"MAR": 60,
+			"MDR": 5,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 1 to the register 15",
+		"Clock": 24,
+		"Time taken (in microseconds)": 0 ,
+		"PC":64,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 0, 0, 0, 1, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"24": {
+		"FETCH": 
+			"Reading word from memory: 0x40",
+			"IR": "0x78463",
+		"Decode":{
+			"Opcode": 99,
+			"RD": 15,
+			"Func3": 0,
+			"RS1": 15,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 8},
+			"Message": "This is BEQ instruction.",
+			"Control Signals":{
+				"RF_Write": 0,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 1,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 1,
+			"alu.RB": 0,
+			"ALU_Result": 0,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 0,
+			"MAR": 64,
+			"MDR": 5,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"No updation in the register value.",
+		"Clock": 25,
+		"Time taken (in microseconds)": 2007 ,
+		"PC":68,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 0, 0, 0, 1, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"25": {
+		"FETCH": 
+			"Reading word from memory: 0x44",
+			"IR": "0xFE0002E3",
+		"Decode":{
+			"Opcode": 99,
+			"RD": 15,
+			"Func3": 0,
+			"RS1": 0,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": -28},
+			"Message": "This is BEQ instruction.",
+			"Control Signals":{
+				"RF_Write": 0,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 1,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 0,
+			"alu.RB": 0,
+			"ALU_Result": 1,
+			"MuxB_Result": 0,
+			"MuxY_Result": 1},
+		"MemoryAccess":{
+			"RY": 1,
+			"MAR": 68,
+			"MDR": 5,
+			"Updating PC": "Jumped to offset provided by the immediate value."},
+		"RegisterUpdate": 
+			"No updation in the register value.",
+		"Clock": 26,
+		"Time taken (in microseconds)": 0 ,
+		"PC":40,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 5, 0, 0, 0, 1, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"26": {
+		"FETCH": 
+			"Reading word from memory: 0x28",
+			"IR": "0xA485B3",
+		"Decode":{
+			"Opcode": 51,
+			"RD": 11,
+			"Func3": 0,
+			"RS1": 9,
+			"RS2": 10,
+			"Func7": 0,
+			"Immediate": -28},
+			"Message": "This is Add Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 3,
+			"alu.RB": 5,
+			"ALU_Result": 8,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 8,
+			"MAR": 40,
+			"MDR": 5,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 8 to the register 11",
+		"Clock": 27,
+		"Time taken (in microseconds)": 0 ,
+		"PC":44,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 8, 0, 0, 0, 1, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"27": {
+		"FETCH": 
+			"Reading word from memory: 0x2C",
+			"IR": "0xB82023",
+		"Decode":{
+			"Opcode": 35,
+			"RD": 11,
+			"Func3": 2,
+			"RS1": 16,
+			"RS2": 11,
+			"Func7": 0,
+			"Immediate": 0},
+			"Message": "This is sw Instruction.",
+			"Control Signals":{
+				"RF_Write": 0,
+				"MuxB_select": 1,
+				"MuxY_select": 1,
+				"Mem_Write": 0,
+				"Mem_Read": 1},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 16,
+			"alu.RB": 8,
+			"ALU_Result": 16,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 1,
+			"MAR": 16,
+			"MDR": 8,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"No updation in the register value.",
+		"Clock": 28,
+		"Time taken (in microseconds)": 0 ,
+		"PC":48,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 8, 0, 0, 0, 1, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10": [8 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"28": {
+		"FETCH": 
+			"Reading word from memory: 0x30",
+			"IR": "0x480813",
+		"Decode":{
+			"Opcode": 19,
+			"RD": 16,
+			"Func3": 0,
+			"RS1": 16,
+			"RS2": 11,
+			"Func7": 0,
+			"Immediate": 4},
+			"Message": "This is addi Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 16,
+			"alu.RB": 8,
+			"ALU_Result": 20,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 20,
+			"MAR": 48,
+			"MDR": 8,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 20 to the register 16",
+		"Clock": 29,
+		"Time taken (in microseconds)": 0 ,
+		"PC":52,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 8, 0, 0, 0, 1, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10": [8 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"29": {
+		"FETCH": 
+			"Reading word from memory: 0x34",
+			"IR": "0x504B3",
+		"Decode":{
+			"Opcode": 51,
+			"RD": 9,
+			"Func3": 0,
+			"RS1": 10,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 4},
+			"Message": "This is Add Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 5,
+			"alu.RB": 0,
+			"ALU_Result": 5,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 5,
+			"MAR": 52,
+			"MDR": 8,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 5 to the register 9",
+		"Clock": 30,
+		"Time taken (in microseconds)": 0 ,
+		"PC":56,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 8, 0, 0, 0, 1, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10": [8 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"30": {
+		"FETCH": 
+			"Reading word from memory: 0x38",
+			"IR": "0x58533",
+		"Decode":{
+			"Opcode": 51,
+			"RD": 10,
+			"Func3": 0,
+			"RS1": 11,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 4},
+			"Message": "This is Add Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 8,
+			"alu.RB": 0,
+			"ALU_Result": 8,
+			"MuxB_Result": 0,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 8,
+			"MAR": 56,
+			"MDR": 8,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 8 to the register 10",
+		"Clock": 31,
+		"Time taken (in microseconds)": 0 ,
+		"PC":60,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 8, 8, 0, 0, 0, 1, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10": [8 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"31": {
+		"FETCH": 
+			"Reading word from memory: 0x3C",
+			"IR": "0xFFF78793",
+		"Decode":{
+			"Opcode": 19,
+			"RD": 15,
+			"Func3": 0,
+			"RS1": 15,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": -1},
+			"Message": "This is addi Instruction.",
+			"Control Signals":{
+				"RF_Write": 1,
+				"MuxB_select": 1,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 0,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 1,
+			"alu.RB": 0,
+			"ALU_Result": 0,
+			"MuxB_Result": 1,
+			"MuxY_Result": 0},
+		"MemoryAccess":{
+			"RY": 0,
+			"MAR": 60,
+			"MDR": 8,
+			"Updating PC": "Jumped to the next sequential instruction."},
+		"RegisterUpdate": 
+			"Writing value 0 to the register 15",
+		"Clock": 32,
+		"Time taken (in microseconds)": 0 ,
+		"PC":64,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 8, 8, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10": [8 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	},
+	"32": {
+		"FETCH": 
+			"Reading word from memory: 0x40",
+			"IR": "0x78463",
+		"Decode":{
+			"Opcode": 99,
+			"RD": 15,
+			"Func3": 0,
+			"RS1": 15,
+			"RS2": 0,
+			"Func7": 0,
+			"Immediate": 8},
+			"Message": "This is BEQ instruction.",
+			"Control Signals":{
+				"RF_Write": 0,
+				"MuxB_select": 0,
+				"MuxY_select": 0,
+				"Mem_Write": 0,
+				"Mem_Read": 0},
+				"MuxPC_select": 1,
+				"MuxMA_select": 0,
+				"MuxINC_select": 1,
+				"MuxC_select": 0,
+		"Execute":{
+			"alu.RA": 0,
+			"alu.RB": 0,
+			"ALU_Result": 1,
+			"MuxB_Result": 0,
+			"MuxY_Result": 1},
+		"MemoryAccess":{
+			"RY": 1,
+			"MAR": 64,
+			"MDR": 8,
+			"Updating PC": "Jumped to offset provided by the immediate value."},
+		"RegisterUpdate": 
+			"No updation in the register value.",
+		"Clock": 33,
+		"Time taken (in microseconds)": 0 ,
+		"PC":72,
+		"Reg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 8, 8, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		"Data": {
+			"0x8": [3 , 0 , 0 , 0],
+			"0xC": [5 , 0 , 0 , 0],
+			"0x10": [8 , 0 , 0 , 0],
+			"0x10000000": [1 , 0 , 0 , 0],
+			"0x10000004": [2 , 0 , 0 , 0],
+			"0x10000008": [5 , 0 , 0 , 0],
+			"0x1000000F": [16 , 0 , 0 , 0]
+		}
+	}
+}
