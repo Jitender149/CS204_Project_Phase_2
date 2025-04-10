@@ -10,43 +10,43 @@
 # define ll long long
 using namespace std;
 // First define all the variables that we need throughout the program
-long long reg[32] = {0};
-long long RS1;
-long long RS2;
-long long RD;
-long long RM;
-long long RZ;
-long long RY;
-long long RA;
-long long RB;
-long long PC;
-long long IR;
-long long MuxB_select;
-long long MuxC_select;
-long long MuxINC_select;
-long long MuxY_select;
-long long MuxPC_select;
-long long MuxMA_select;
-long long RegFileAddrA;
-long long RegFileAddrB;
-long long RegFileAddrC;
-long long RegFileInp;
-long long RegFileAOut;
-long long RegFileBOut;
-long long MAR;
-long long MDR;
-long long opcode;
-long long func3;
-long long func7;
-long long numBytes;
-long long RF_Write;
-long long immed;
-long long PC_Temp;
-long long Mem_Write;
-long long Mem_Read;
-long long ALUOp[15] = {0}; 
-long long ui, clk=0;
-long long isStepClicked = 0;
+long long reg[32] = {0}; // register array
+long long RS1; // source register 1
+long long RS2; // source register 2
+long long RD; // destination register
+long long RM; // register to be modified
+long long RZ; // result of the ALU operation
+long long RY; // result of the memory operation
+long long RA; // operand 1 for ALU operation
+long long RB; // operand 2 for ALU operation
+long long PC; // program counter
+long long IR; // instruction register
+long long MuxB_select; // select the operand for the ALU operation
+long long MuxC_select; // select the operand for the memory operation
+long long MuxINC_select; // select the operand for the immediate operation
+long long MuxY_select; // select the operand for the memory operation
+long long MuxPC_select; // select the operand for the PC update
+long long MuxMA_select; // select the operand for the memory address
+long long RegFileAddrA; // address of the source register 1
+long long RegFileAddrB; // address of the source register 2
+long long RegFileAddrC; // address of the destination register
+long long RegFileInp; // input to the register file
+long long RegFileAOut; // output of the register file
+long long RegFileBOut; // output of the register file
+long long MAR; // memory address register
+long long MDR; // memory data register
+long long opcode; // opcode of the instruction
+long long func3; // function 3 of the instruction
+long long func7; // function 7 of the instruction
+long long numBytes; // number of bytes to be read/written
+long long RF_Write; // write enable for the register file
+long long immed; // immediate value
+long long PC_Temp; // temporary PC value
+long long Mem_Write; // write enable for the memory
+long long Mem_Read; // read enable for the memory
+long long ALUOp[15] = {0}; // ALU operation array
+long long ui, clk=0; // ui is the instruction unit and clk is the clock cycle
+long long isStepClicked = 0; // step clicked flag
 
 extern long long RS1,RS2;
 // Now we have the maps to store the data and instruction memory
