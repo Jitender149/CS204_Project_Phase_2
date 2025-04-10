@@ -47,7 +47,7 @@ long long Mem_Read; // read enable for the memory
 long long ALUOp[15] = {0}; // ALU operation array
 long long ui, clk=0; // ui is the instruction unit and clk is the clock cycle
 long long isStepClicked = 0; // step clicked flag
-
+// this allows the simulator to pause execution after each step when in step mode, givingg users the ability toexecute instructions one at a time
 extern long long RS1,RS2;
 // Now we have the maps to store the data and instruction memory
 std::map<long long  , std::vector<long long  >> dataMemory;
@@ -82,7 +82,7 @@ int main() {
                 mcFile.close();
                 return 1;
             }
-            long long x1 = strtoll(x[0].c_str(), nullptr, 16);
+            long long x1 = strtoll(x[0].c_str(), nullptr, 16); // little endian format
             dataMemory[x1].push_back((strtoll(x[1].c_str(), nullptr, 16)) & strtoll("0xFF", nullptr, 16));
             dataMemory[x1].push_back(((strtoll(x[1].c_str(), nullptr, 16)) & strtoll("0xFF00", nullptr, 16))>>8);
             dataMemory[x1].push_back(((strtoll(x[1].c_str(), nullptr, 16)) & strtoll("0xFF0000", nullptr, 16))>>16);
@@ -98,7 +98,7 @@ int main() {
             long long x1 = strtoll(x[0].c_str(), nullptr, 16);
             for(int i = 0; i < 4; ++i) {
                 string temps = "0xFF";
-                for(int j = 0; j < 2*i; ++j) temps+="0";
+                for(int j = 0; j < 2*i; ++j) temps+="0"; // again little endian format
                 instructionMemory[x1].push_back(hex((strtoll(x[1].c_str(), nullptr, 16) & strtoll(temps.c_str(), nullptr, 16)) >> (8*i)));
                 temps = "";
                 if((2-instructionMemory[x1][i].size()) > 0) for(int j = 0; j < (2-instructionMemory[x1][i].size()); ++j) temps+="0";
@@ -136,10 +136,10 @@ bool validateDataSegment(vector<string> a) {
     if(a.size() != 2) return 0;
     string addr = a[0];
     string data = a[1];
-    if((addr[0]!='0'&& addr[1]!='x') || (data[0]!='0' && data[1]!='x')) return 0;
+    if((addr[0]!='0'&& addr[1]!='x') || (data[0]!='0' && data[1]!='x')) return 0; // wrt input.mc file
     try
     {
-        if(strtoll(addr.c_str(), nullptr, 16) < strtoll("0x10000000", nullptr, 16)) return 0;
+        if(strtoll(addr.c_str(), nullptr, 16) < strtoll("0x10000000", nullptr, 16)) return 0; // if address is less than 0x10000000 return 0
         strtoll(data.c_str(), nullptr, 16);
     }
     catch(const std::exception& e)
@@ -150,10 +150,10 @@ bool validateDataSegment(vector<string> a) {
 }
 
 bool validateInstruction(vector<string> a) {
-    if(a.size() != 2) return 0;
+    if(a.size() != 2) return 0;  // exactly 2 elements in the vector
     string addr = a[0];
     string data = a[1];
-    try
+    try // to see if the address and data are valid hex numbers
     {
         strtoll(addr.c_str(), nullptr, 16);
         strtoll(data.c_str(), nullptr, 16);
@@ -249,7 +249,8 @@ void run_RISC_simulator() {
     }
     json.seekp(-3, std::ios_base::end); json<<"\n";
     json<<"}";
-    json.close();
+    json.close();  // closing the out.json file
+    // writing the contents of the registers and data memory to the output.txt file
     out<<"REGISTERS :\n";
     for(auto it:reg) out<<it<<"\n";
     out<<"DATA :\n";
@@ -257,3 +258,5 @@ void run_RISC_simulator() {
     out.close();
     return;
 }
+// out.json is for detailed output of the simulator
+// output.txt is for the registers and data memory contents

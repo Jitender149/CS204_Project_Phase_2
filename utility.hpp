@@ -42,13 +42,13 @@ void init() {
     reg[3] = 0x10000000;    //data pointer
     RS1 = RS2 = RD = RM = RZ = RY = RA = RB = PC = IR = MuxB_select = MuxC_select = MuxINC_select = MuxY_select = MuxPC_select = MuxMA_select = RegFileAddrA = RegFileAddrB = RegFileAddrC = RegFileInp = RegFileAOut = RegFileBOut = MAR = MDR = opcode = numBytes = RF_Write = immed = PC_Temp = Mem_Write = Mem_Read = 0;
 }
-
+// this function returns a string representing the data read from or written to the memory
 std::string ProcessorMemoryInterface() {
     if(MuxMA_select == 0) {
         if(Mem_Read==1) {
             std::vector<long long > t;
             for(long long  i = 0; i < numBytes; ++i) {
-                if(dataMemory.find(MAR)!=dataMemory.end())
+                if(dataMemory.find(MAR)!=dataMemory.end()) // reding from the data memory
                 {
                 if(i<dataMemory[MAR].size())
                 t.push_back(dataMemory[MAR][i]);
@@ -66,7 +66,7 @@ std::string ProcessorMemoryInterface() {
                 for(long long  j = 0; j <= 2-curr.size(); j++) ans+="0";
                 ans+=curr;
             }
-            return ans;
+            return ans;   // returns the data read from the memory in hexadecimal format
         }
         else if(Mem_Write==1) {
             
@@ -86,13 +86,13 @@ std::string ProcessorMemoryInterface() {
         }
     }
     else {
-        std::vector<std::string> t = instructionMemory[MAR];
+        std::vector<std::string> t = instructionMemory[MAR]; // access the instruction memory at the address MAR
         std::string ans = "";
         long long  x = t.size();
         for(long long  i = 0; i < x; ++i) ans+=(t[x-1-i]);
         ans = "0x"+ans;
-        return ans;
-    }
+        return ans;  // return the instruction read from the memory in hexadecimal format
+    } 
     return "";
 }
 
@@ -105,7 +105,7 @@ void GenerateControlSignals(long long  reg_write,long long  MuxB,long long  MuxY
     MuxMA_select = MuxMA;
     MuxPC_select = MuxPC;
     MuxINC_select = MuxINC;
-    numBytes = numB;
+    numBytes = numB; // number of bytes to be read/written
 }
 
 void fetch() {
@@ -117,19 +117,19 @@ void fetch() {
 std:: string fetch1() {
     std::string message = "";
     MAR = strtoull(("0x"+hex(PC)).c_str(), nullptr, 16);
-    MuxMA_select = 1;
+    MuxMA_select = 1; // instruction memory accessed
     IR = strtoull(ProcessorMemoryInterface().c_str(), nullptr, 16);
     message = "\"0x" + hex(IR) + "\"";  // This will create a hexadecimal string representation of IR
     PC_Temp = PC+4;
     return message;
 }
-
-void ImmediateSign(int num) {
+// num represents the number of bits in the immediate value
+void ImmediateSign(int num) { // sign extends the immediate value
     num--;
-    if((immed & ((1ULL << (num-1)))) == 0)
+    if((immed & ((1ULL << (num-1)))) == 0)  // checks if the most significant bit is 0
         return;
-    immed ^= (1ULL << num) - 1;
-    immed += 1;
+    immed ^= (1ULL << num) - 1; // flip all the bits after the sign bit
+    immed += 1;     
     immed *= -1;
 }
 
