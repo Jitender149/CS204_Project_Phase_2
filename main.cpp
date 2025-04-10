@@ -8,7 +8,7 @@
 #include<fstream>
 # include <chrono>  // using this to calculate the time taken by the execution of each instruction
 # define ll long long
-using namespace std; // using namespace std to avoid writing std:: everywhere
+using namespace std;
 // First define all the variables that we need throughout the program
 long long reg[32] = {0}; // register array
 long long RS1; // source register 1
