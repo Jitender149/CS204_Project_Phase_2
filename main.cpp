@@ -21,12 +21,12 @@ long long RA; // operand 1 for ALU operation
 long long RB; // operand 2 for ALU operation
 long long PC; // program counter
 long long IR; // instruction register
-long long MuxB_select; // select the operand for the ALU operation
-long long MuxC_select; // select the operand for the memory operation
-long long MuxINC_select; // select the operand for the immediate operation
-long long MuxY_select; // select the operand for the memory operation
-long long MuxPC_select; // select the operand for the PC update
-long long MuxMA_select; // select the operand for the memory address
+long long MuxB_select;      // Controls second input to ALU (between immediate and register)
+long long MuxC_select;      // Control signal for C multiplexer --> not used tho
+long long MuxINC_select;    // Controls PC increment (branch/no branch)
+long long MuxY_select;      // Selects final output (between ALU result and memory data)
+long long MuxPC_select;     // Controls next PC value
+long long MuxMA_select;     // Controls memory address selection
 long long RegFileAddrA; // address of the source register 1
 long long RegFileAddrB; // address of the source register 2
 long long RegFileAddrC; // address of the destination register
