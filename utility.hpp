@@ -514,7 +514,7 @@ OPCODE          func3           Instruction
 
 
 
-
+// uses the ALUOp array to execute the instruction (set during decode stage)
 int Execute()
 {
     long long  i=0;
@@ -690,12 +690,12 @@ std::string MemoryAccess() {
         
         RY = RZ;   // we are using RZ as the data to be stored in the memory
     }
-    else if(MuxY_select == 1) {
+    else if(MuxY_select == 1) {  // peroform memory read operation
         MAR = strtoull(("0x"+hex(RZ)).c_str(), nullptr, 16);
         MDR = RM;
         RY = strtoull((ProcessorMemoryInterface()).c_str(), nullptr, 16);
-        
-        if(RY > ((1ULL << 31) - 1))
+        // call func to read from memory at address in MAR and store in RY
+        if(RY > ((1ULL << 31) - 1))  // if the data is negative, 2's complement representation
             RY = -((1ULL << 32)-RY);
     }
     else if(MuxY_select == 2) 
